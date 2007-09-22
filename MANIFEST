@@ -1,0 +1,15 @@
+README
+Changes
+COPYING
+Makefile.PL
+MANIFEST
+lib/Unicode/Stringprep.pm
+lib/Unicode/Stringprep/Unassigned.pm
+lib/Unicode/Stringprep/Mapping.pm
+lib/Unicode/Stringprep/Prohibited.pm
+lib/Unicode/Stringprep/BiDi.pm
+t/00use.t
+t/nameprep.t
+t/nameprep_st.t
+t/saslprep.t
+META.yml                                 Module meta-data (added by MakeMaker)

@@ -1,0 +1,54 @@
+NAME
+
+  Unicode::Stringprep - Preparation of Internationalized 
+                        Strings (RFC 3454)
+
+DESCRIPTION
+
+  This module implements the stringprep framework for preparing
+  Unicode text strings in order to increase the likelihood that
+  string input and string comparison work in ways that make sense
+  for typical users throughout the world.  The stringprep protocol
+  is useful for protocol identifier values, company and personal
+  names, internationalized domain names, and other text strings.
+
+  The stringprep framework does not specify how protocols should
+  prepare text strings. Protocols must create profiles of
+  stringprep in order to fully specify the processing options.
+
+INSTALLATION
+
+  To install this module type the following:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+DEPENDENCIES
+
+  This module requires these other modules and libraries:
+
+    Unicode::Normalize (core module as of perl 5.8.x)
+
+PERL VERSION
+
+  You should use perl 5.8.x or higher.
+
+  Well, these modules DO work with perl 5.6.x. However, YOU have
+  to make sure that you only pass valid UTF-8 strings to this
+  module or you will get unintended results. perl 5.8.x (or
+  higher) takes care of this by maintaining a UTF-8 flag for
+  strings.
+
+AUTHOR
+
+  Claus Färber <CFAERBER@cpan.org>
+
+ACKNOWLEDGMENTS
+
+  P. Hoffman (editor of RFC 3454)
+  M. Blanchet (editor of RFC 3454)
+  S. Josefsson (draft-josefsson-idn-test-vectors-00.txt)
+
+$Id: README 48 2007-09-22 15:04:33Z cfaerber $
