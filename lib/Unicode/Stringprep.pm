@@ -1,4 +1,4 @@
-# $Id: Stringprep.pm 48 2007-09-22 15:04:33Z cfaerber $
+# $Id: Stringprep.pm 52 2007-09-28 15:29:50Z cfaerber $
 
 package Unicode::Stringprep;
 
@@ -6,7 +6,7 @@ use strict;
 use utf8;
 require 5.006_000;
 
-our $VERSION = '0.99_20070923';
+our $VERSION = '0.99_20070927';
 $VERSION = eval $VERSION;
 
 require Exporter;
@@ -45,7 +45,8 @@ sub _compile {
   my $prohibited_sub = _compile_prohibited($prohibited_tables);
   my $bidi_sub = $bidi_check ? _compile_bidi() : undef;
 
-  my $code = 'sub { my $string = shift;'.
+  my $code = "sub { no warnings 'utf8';".
+   'my $string = shift;'.
    join('', map { $_ ? "{$_}\n" : ''} (
       $mapping_sub,
       $normalization_sub,
@@ -56,6 +57,7 @@ sub _compile {
 
   return eval $code || die $@;
 }
+
 
 sub _compile_mapping {
   my %map = ();
@@ -70,39 +72,29 @@ sub _compile_mapping {
   }
   _mapping_tables(\%map,@_);
 
-  my $mapping=undef;
-  sub _mapping_compile {
-    my $map = shift;
+  return '' if !%map;
 
-    if($#_ <= 7) {
-      return 'if('.
-        join('}elsif(',
-	  map {
-	    my $replace = $map->{$_};
-	    $replace =~ s/(.)/sprintf('\x{%04X}',ord($1))/ge;
-	    '$d=='.$_.'){$e="'.$replace.'";'
-	  } @_ ).
-	'}else{next MAPPING;}'; 
-    } else {
+  sub _compile_mapping_r { 
+     my $map = shift;
+     if($#_ <= 7) {
+       return (join '', (map { '$char == '.$_.
+        ' ? "'.(join '', map { s/[\/\$\@\%\&\\]/\\$1/g; $_; } ( $$map{$_} )).'"'.
+        '   : ' } @_)).' die';
+     } else {
       my @a = splice @_, 0, int($#_/2);
-      return 'if($d<'.$_[0].'){'.
-        _mapping_compile($map,@a).
-	'}else{'.
-        _mapping_compile($map,@_).
-	'};';
-    }
-  }
+      return '$char < '.$_[0].' ? ('.
+        _compile_mapping_r($map,@a).
+	') : ('.
+        _compile_mapping_r($map,@_).
+	')';
+     }
+  };
 
-  if(%map) {
-    return
-      'MAPPING: for(my $pos=length($string);$pos>=0;$pos--) {'.
-        'my $d=ord(substr($string,$pos,1)); my $e=undef;'.
-        _mapping_compile(\%map,sort { $a<=>$b } keys %map).
-        'substr($string,$pos,1) = $e'.
-      '}';
-  } else {
-    return ''; 
-  }
+  my @from = sort { $a <=> $b } keys %map;
+
+  return sprintf '$string =~ s/([%s])/my $char = ord($1); %s /ge;',
+    (join '', (map { sprintf '\\x{%04X}', $_; } @from)),
+    _compile_mapping_r(\%map, @from);
 }
 
 sub _compile_normalization {
@@ -142,28 +134,12 @@ sub _compile_set {
     }
   }
 
-  my $set=undef;
-  sub _set_compile {
-    return '' if !@_;
-
-    if($#_ <= 7) {
-      return
-        join(':',
-	  map {
-	    ( $_->[0] == $_->[1]
-    	      ? '$char=='.$_->[0]
-              : '$char>='.$_->[0].'&&'.'$char<='.$_->[1]).
-	    '?1'
-	  } @_).':undef';
-    } else {
-      my @a = splice @_, 0, int($#_/2);
-      return '$char<'.$_[0]->[0].'?('.
-        _set_compile(@a).
-	'):('.
-        _set_compile(@_).
-	')';
-    }
-  }
+  return join '', map {
+    sprintf( $_->[0] >= $_->[1] 
+      ? "\\x{%04X}"
+      : "\\x{%04X}-\\x{%04X}",
+      @{$_})
+    } @set;
 
   return _set_compile(@set);
 }
@@ -173,12 +149,8 @@ sub _compile_prohibited {
 
   if($prohibited_sub) {
     return 
-      'my $length = length($string);'.
-      'for(my $pos=0;$pos<$length;$pos++) {'.
-        'my $char = ord(substr($string, $pos, 1));'.
-	'if('.$prohibited_sub.') {'.
-          'croak sprintf("prohibited character U+%04X",$char)'.
-	'}'.
+      'if($string =~ m/(['.$prohibited_sub.'])/) {'.
+          'die sprintf("prohibited character U+%04X",ord($1))'.
       '}';
   }
 }
@@ -188,24 +160,13 @@ sub _compile_bidi {
   my $is_L = _compile_set(@Unicode::Stringprep::BiDi::D2);
 
   return 
-    'my $length = length($string);'.
-    'my $has_RandAL = 0;'.
-    'my $has_L = 0;'.
-
-    'for(my $pos=0;$pos<$length;$pos++) {'.
-      'my $char = ord(substr($string, $pos, 1));'.
-      'if(!$has_L && ('.$is_L.')){ $has_L = 1; };'.
-      'if((!$has_RandAL || $pos == $length-1) && ('.$is_RandAL.')){'.
-	  'if($pos>0 && !$has_RandAL){'. # if we find a RandAL at pos > 0, there must have been one (at least at pos 0)
-            'croak "string contains RandALCat character but does not start with one($pos)($char)"'.
-	  '}'.
-	  '$has_RandAL = 1;'.
-      '} elsif($has_RandAL && $pos == $length-1) {'.
-        'croak "string contains RandALCat character but does not end with one ($pos)($char)"'.
-      '}'.
-      
-      'if($has_L && $has_RandAL) {'.
-        'croak "string contains both RandALCat and LCat characters($pos)($char)"'.
+    'if($string =~ m/['.$is_RandAL.']/) {'.
+      'if($string =~ m/['.$is_L.']/) {'.
+        'die "string contains both RandALCat and LCat characters"'.
+      '} elsif($string !~ m/^['.$is_RandAL.']/) {'.
+        'die "string contains RandALCat character but does not start with one"'.
+      '} elsif($string !~ m/['.$is_RandAL.']$/) {'.
+        'die "string contains RandALCat character but does not end with one"'.
       '}'.
     '}';
 }

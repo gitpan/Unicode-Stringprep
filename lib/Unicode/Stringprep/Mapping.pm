@@ -1,4 +1,4 @@
-# $Id: Mapping.pm 48 2007-09-22 15:04:33Z cfaerber $
+# $Id: Mapping.pm 51 2007-09-27 18:29:56Z cfaerber $
 
 package Unicode::Stringprep::Mapping;
 
@@ -6,27 +6,11 @@ use strict;
 use utf8;
 require 5.006_000;
 
-our $VERSION = '0.99_20070923';
+our $VERSION = '0.99_20070927';
 
-my $_mk_table = sub {
-  my @data = ();
-  foreach my $line (split /\n/, shift) {
-    my($from,$to,$comment) = split /;/, $line; 
-    $from =~ s/[^0-9A-F]//gi;
-    $to =~ s/[^0-9A-F ]//gi;
-    push @data, 
-        hex($from), 
-        join('',map { 
-	  $_ eq '' 
-	    ? '' 
-	    : chr(hex($_)) 
-	}
-	split(/ +/, $to));
-  }
-  return @data;
-};
+use Unicode::Stringprep::_Common;
 
-our @B1 = $_mk_table->(<<END);
+our @B1 = _mk_map(<<END);
    00AD; ; Map to nothing
    034F; ; Map to nothing
    1806; ; Map to nothing
@@ -56,7 +40,7 @@ our @B1 = $_mk_table->(<<END);
    FEFF; ; Map to nothing
 END
 
-our @B2 = $_mk_table->(<<END);
+our @B2 = _mk_map(<<END);
    0041; 0061; Case map
    0042; 0062; Case map
    0043; 0063; Case map
@@ -1430,7 +1414,7 @@ our @B2 = $_mk_table->(<<END);
    1D7BB; 03C3; Additional folding
 END
 
-our @B3 = $_mk_table->(<<END);
+our @B3 = _mk_map(<<END);
    0041; 0061; Case map
    0042; 0062; Case map
    0043; 0063; Case map

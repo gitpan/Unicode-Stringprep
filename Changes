@@ -1,8 +1,12 @@
 Revision history for Perl extension Net::IDN::Encode
 
-0.99_20070922 Wed Sat 22 00:00:00 2007
-	- first release
+0.99_20070927 Fri Sep 28 00:00:00 2007
+	- better 5.6.x compatibility
+	- better performance (using regular expression)
+
+0.99_20070922 Wed Sep 22 00:00:00 2007
+	- first public developer release
 	- based on RFC 3454, includes test vectors from Internet
 	  Draft draft-josefsson-idn-test-vectors-00.
 
-$Id: Changes 48 2007-09-22 15:04:33Z cfaerber $
+$Id: Changes 52 2007-09-28 15:29:50Z cfaerber $

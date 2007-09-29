@@ -1,3 +1,5 @@
+# $Id: 00use.t 50 2007-09-24 12:08:17Z cfaerber $
+
 use strict;
 use Test::More tests=>5;
 
