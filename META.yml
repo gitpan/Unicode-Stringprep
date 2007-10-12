@@ -1,11 +1,11 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Unicode-Stringprep
-version:      0.99_20071004
+version:      1.00
 version_from: lib/Unicode/Stringprep.pm
 installdirs:  site
 requires:
-    Unicode::Normalize:            0.01
+    Unicode::Normalize:            0.3
 
 distribution_type: module
 generated_by: ExtUtils::MakeMaker version 6.30_01

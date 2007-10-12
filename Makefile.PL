@@ -1,4 +1,6 @@
-# $Id: Makefile.PL 48 2007-09-22 15:04:33Z cfaerber $
+# $Id: Makefile.PL 68 2007-10-06 10:14:44Z cfaerber $
+
+BEGIN { require 5.006; }
 
 use utf8;
 use ExtUtils::MakeMaker;
@@ -9,7 +11,7 @@ WriteMakefile(
     'NAME'		=> 'Unicode::Stringprep',
     'VERSION_FROM'	=> 'lib/Unicode/Stringprep.pm', # finds $VERSION
     'PREREQ_PM'		=> {
-		'Unicode::Normalize' => 0.01,
+		'Unicode::Normalize' => 0.30,
 	},
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT => 'Preparation of Internationalized Strings (RFC 3454)',

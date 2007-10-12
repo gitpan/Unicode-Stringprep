@@ -1,4 +1,4 @@
-# $Id: nameprep_st.t 67 2007-10-04 18:27:13Z cfaerber $
+# $Id: nameprep_st.t 69 2007-10-12 10:15:12Z cfaerber $
 
 use strict;
 use utf8;
@@ -143,7 +143,7 @@ our @strprep = (
        "Surrogate code U+DF42",
        "\x{DF42}", undef, "Nameprep", 0,
        'STRINGPREP_CONTAINS_PROHIBITED',
-       5.000, "matching surrogate pairs U+D800..DFFF"
+       5.008003, "matching surrogate pairs U+D800..DFFF"
      ],
      [
        "Non-plain text character U+FFFD",
@@ -250,7 +250,10 @@ foreach my $test (@strprep)
   my ($comment,$in,$out,$profile,$flags,$rc, $min_perl, $min_perl_reason) = @{$test};
 
   SKIP: { 
-    skip sprintf('%s only works from perl v%s', $min_perl_reason || "test", $min_perl), 1 if(($min_perl || 0) > $^V);
+    skip sprintf('%s only works from perl v%d.%d.%d', 
+        $min_perl_reason || "test", 
+        int($min_perl), int($min_perl*1000)%1000, int($min_perl*1000*1000)%1000,), 1 
+      if(($min_perl || 0) > $^V);
     is(eval{nameprep($in)}, $rc ? undef : $out, $comment);
   };
 }

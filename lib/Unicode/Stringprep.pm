@@ -1,4 +1,4 @@
-# $Id: Stringprep.pm 66 2007-10-04 18:23:16Z cfaerber $
+# $Id: Stringprep.pm 68 2007-10-06 10:14:44Z cfaerber $
 
 package Unicode::Stringprep;
 
@@ -6,7 +6,7 @@ use strict;
 use utf8;
 require 5.006_000;
 
-our $VERSION = '0.99_20071004';
+our $VERSION = '1.00';
 $VERSION = eval $VERSION;
 
 require Exporter;

@@ -1,4 +1,4 @@
-# $Id: _Common.pm 51 2007-09-27 18:29:56Z cfaerber $
+# $Id: _Common.pm 68 2007-10-06 10:14:44Z cfaerber $
 
 package Unicode::Stringprep::_Common;
 
@@ -8,7 +8,8 @@ require 5.006_000;
 
 use Exporter;
 
-our $VERSION = '0.99_20070927';
+our $VERSION = '1.00';
+
 our @ISA = ('Exporter');
 our @EXPORT = ('_mk_set', '_mk_map');
 

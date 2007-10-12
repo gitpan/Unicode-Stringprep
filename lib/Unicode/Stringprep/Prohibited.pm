@@ -1,4 +1,4 @@
-# $Id: Prohibited.pm 51 2007-09-27 18:29:56Z cfaerber $
+# $Id: Prohibited.pm 68 2007-10-06 10:14:44Z cfaerber $
 
 package Unicode::Stringprep::Prohibited;
 
@@ -6,7 +6,7 @@ use strict;
 use utf8;
 require 5.006_000;
 
-our $VERSION = '0.99_20070927';
+our $VERSION = '1.00';
 
 use Unicode::Stringprep::_Common;
 
