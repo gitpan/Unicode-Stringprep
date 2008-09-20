@@ -1,0 +1,41 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 292cfbbeb400fc5cee751a612d340fc2e227dbf8 COPYING
+SHA1 f0f02f1a4787e90c8a1adbe301e6a10ad50e4dcf Changes
+SHA1 90ff67508a6cab53ca586e97cad09da81f098824 MANIFEST
+SHA1 af862bf82139640b8a1da18724a1d280f29395c4 META.yml
+SHA1 44b0eb2ddff546555ddf2f8d79bd203bee2ee21c Makefile.PL
+SHA1 9f238e8a6223fbd743214835f59b5e93ce0993cf README
+SHA1 cc31729b608ec47bcd25348da0d50bb103989a9b TODO
+SHA1 906cc976d0350f278a2c21b70ff15ae34cb7ace7 lib/Unicode/Stringprep.pm
+SHA1 6846a4bdc8b38ec0209bfa5627235743fd92fcd8 lib/Unicode/Stringprep/BiDi.pm
+SHA1 a925fb155a2b153537433ef1a8735bab35b298e9 lib/Unicode/Stringprep/Mapping.pm
+SHA1 53f19711f4cee66db5d70a4b7883121c33b5a7a2 lib/Unicode/Stringprep/Prohibited.pm
+SHA1 da86112c0aee28bf923b7d56b351f2f51d4cd98a lib/Unicode/Stringprep/Unassigned.pm
+SHA1 b746d71e2897fc0df27c268e0c8f4faa7d324665 lib/Unicode/Stringprep/_Common.pm
+SHA1 63b38b076c73a52da9a7db0fe30a7909d910aa1a t/00use.t
+SHA1 d3b2c0c53dcf4aa02762e8498c4bea01dc15288a t/01ref.t
+SHA1 dd795591c458125b8f032b087b9cf660c1dd7f0c t/nameprep.t
+SHA1 02e2c6582c379191391f7b139c62dd28a0908c85 t/nameprep_st.t
+SHA1 009cd208722c13660c0ce5449119f246ede489bc t/saslprep.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkjVDiMACgkQSKUOY2OWgPBYjwCggwKuhHWAvHplnOu9M6hUXyU8
+jqkAoKS/c7vXtEfJ4T4REACd5tzKyoC8
+=tuGW
+-----END PGP SIGNATURE-----

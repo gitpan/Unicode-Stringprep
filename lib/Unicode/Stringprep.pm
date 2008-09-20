@@ -1,4 +1,4 @@
-# $Id: Stringprep.pm 68 2007-10-06 10:14:44Z cfaerber $
+# $Id: Stringprep.pm 83 2008-09-20 14:51:23Z cfaerber $
 
 package Unicode::Stringprep;
 
@@ -6,7 +6,7 @@ use strict;
 use utf8;
 require 5.006_000;
 
-our $VERSION = '1.00';
+our $VERSION = '1.00_20080919';
 $VERSION = eval $VERSION;
 
 require Exporter;
@@ -223,7 +223,7 @@ This module exports nothing.
 
 =item B<new($unicode_version, $mapping_tables, $unicode_normalization, $prohibited_tables, $bidi_check)>
 
-Creates a callable object that implements a stringprep profile.
+Creates a C<bless>ed function reference that implements a stringprep profile.
 
 C<$unicode_version> is the Unicode version specified by the
 stringprep profile. Currently, this must be C<3.2>.
@@ -343,23 +343,35 @@ C<Unicode::Stringprep>.
 
 You should use perl 5.8.3 or higher.
 
-Well, these modules DO work with perl 5.6.x. However, B<you> have to make sure
-that you only pass valid UTF-8 strings to this module or you will get
-unintended results. perl 5.8.x (or higher) takes care of this by maintaining a
-UTF-8 flag for strings.
+While this module does work with earlier perl versions, there are
+some limitations:
 
-With perl versions up to 5.8.2, surrogate characters (U+D800..U+DFFF) break
-string handling. If a profile tries to map these characters, they won't be
-mapped (currently no stringprep profile does this). If a profile prohibits
-these characters, this module may fail to detect them (currently, all profiles
-do that, so B<you> have to make sure that these characters are not present).
+Perl 5.6 does not promote strings to UTF-8 automatically.
+B<You> have to make sure that you only pass valid UTF-8 strings to
+this module.
+
+Perl 5.6 to 5.7 come with Unicode databases earlier than 
+version 3.2. Strings that contain characters for which the
+normalisation has been changed are not prepared correctly.
+
+Perl 5.6 to 5.8.2 can't handle surrogate characters
+(U+D800..U+DFFF) in strings.
+If a profile tries to map these characters, they won't be mapped
+(currently no stringprep profile does this).
+If a profile prohibits these characters, this module may fail to
+detect them (currently, all profiles do that, so B<you> have to
+make sure that these characters are not present).
 
 =head1 AUTHOR
 
 Claus Färber <CFAERBER@cpan.org>
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=head1 LICENSE
+
+Copyright © 2007-2008 Claus Färber. All rights reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 

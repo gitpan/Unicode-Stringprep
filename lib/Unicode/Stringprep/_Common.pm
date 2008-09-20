@@ -1,4 +1,4 @@
-# $Id: _Common.pm 68 2007-10-06 10:14:44Z cfaerber $
+# $Id: _Common.pm 83 2008-09-20 14:51:23Z cfaerber $
 
 package Unicode::Stringprep::_Common;
 
@@ -24,7 +24,7 @@ sub _mk_set {
   return @data;
 };
 
-my $_mk_char = $[ <= 5.008002
+my $_mk_char = $] <= 5.008002
   ? sub { eval '"\\x{'.(shift).'}"' }
   : sub { chr(hex(shift)) };
 
@@ -47,3 +47,14 @@ sub _mk_map {
 };
 
 1;
+
+# =head1 AUTHOR
+# 
+# Claus Färber E<lt>CFAERBER@cpan.orgE<gt>
+# 
+# =head1 LICENSE
+# 
+# Copyright © 2007-2008 Claus Färber. All rights reserved.
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the same terms as Perl itself.

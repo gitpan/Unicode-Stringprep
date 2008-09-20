@@ -1,4 +1,4 @@
-# $Id: Prohibited.pm 68 2007-10-06 10:14:44Z cfaerber $
+# $Id: Prohibited.pm 83 2008-09-20 14:51:23Z cfaerber $
 
 package Unicode::Stringprep::Prohibited;
 
@@ -160,8 +160,12 @@ This module exports nothing.
 
 Claus Färber E<lt>CFAERBER@cpan.orgE<gt>
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=head1 LICENSE
+
+Copyright © 2007-2008 Claus Färber. All rights reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 

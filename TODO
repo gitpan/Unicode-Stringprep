@@ -1,6 +1,6 @@
 ROADMAP for Unicode::Stringprep
 
-v1.001
+v2.x
 
 - string preperation for stored strings
 
@@ -8,4 +8,4 @@ v1.001
   codepoints (e.g.  surrogate pairs U+D800..U+DFFF). Currently,
   this does not work at all with perl versions 5.6.0 to 5.8.2.
 
-$Id: TODO 69 2007-10-12 10:15:12Z cfaerber $  
+$Id: TODO 83 2008-09-20 14:51:23Z cfaerber $  
