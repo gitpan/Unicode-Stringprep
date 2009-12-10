@@ -1,7 +1,8 @@
-# $Id: 00use.t 50 2007-09-24 12:08:17Z cfaerber $
+# $Id: 00use.t 85 2009-12-10 19:00:14Z cfaerber $
 
 use strict;
-use Test::More tests=>5;
+use Test::More tests=>6;
+use Test::NoWarnings;
 
 BEGIN { use_ok 'Unicode::Stringprep' }
 BEGIN { use_ok 'Unicode::Stringprep::Unassigned' }

@@ -1,5 +1,16 @@
 Revision history for Perl extension Net::IDN::Encode
 
+1.01 Thu Dec 10 00:00:00 2009
+	- release 1.00_20080919 as 1.01
+	- add Example.pod
+	- add dist signature
+	- add LICENSE file
+
+1.00_20080919 Sat Sep 19 00:00:00 2008
+	- fixed compile error on Solaris 2.11 (i86pc-solaris-64int)
+	- add SIGNATURE
+	- pod cleanup
+
 1.00 Fri Oct 12 00:00:00 2007
 	- first release
 	- cleanup
@@ -17,4 +28,4 @@ Revision history for Perl extension Net::IDN::Encode
 	- based on RFC 3454, includes test vectors from Internet
 	  Draft draft-josefsson-idn-test-vectors-00.
 
-$Id: Changes 83 2008-09-20 14:51:23Z cfaerber $
+$Id: Changes 85 2009-12-10 19:00:14Z cfaerber $

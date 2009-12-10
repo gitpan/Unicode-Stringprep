@@ -1,9 +1,10 @@
-# $Id: nameprep_st.t 69 2007-10-12 10:15:12Z cfaerber $
+# $Id: nameprep_st.t 85 2009-12-10 19:00:14Z cfaerber $
 
 use strict;
 use utf8;
 
 use Test::More;
+use Test::NoWarnings;
 
 no warnings 'utf8';
 
@@ -221,7 +222,7 @@ our @strprep = (
      ],
    );
 
-plan tests => ($#strprep+1);
+plan tests => ($#strprep+1) + 1;
 
 *nameprep = Unicode::Stringprep->new(
   3.2,

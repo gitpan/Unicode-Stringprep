@@ -1,12 +1,13 @@
-# $Id: Mapping.pm 83 2008-09-20 14:51:23Z cfaerber $
+# $Id: Mapping.pm 85 2009-12-10 19:00:14Z cfaerber $
 
 package Unicode::Stringprep::Mapping;
 
 use strict;
 use utf8;
+use warnings;
 require 5.006_000;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use Unicode::Stringprep::_Common;
 

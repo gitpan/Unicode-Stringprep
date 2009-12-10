@@ -1,9 +1,10 @@
-# $Id: 01ref.t 50 2007-09-24 12:08:17Z cfaerber $
+# $Id: 01ref.t 85 2009-12-10 19:00:14Z cfaerber $
 
 use strict;
 use utf8;
 
-use Test::More tests => 3;
+use Test::More tests => 4;
+use Test::NoWarnings;
 
 use Unicode::Stringprep;
 
