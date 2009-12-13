@@ -2,9 +2,7 @@ README
 Changes
 LICENSE
 MANIFEST
-META.yml
 Makefile.PL
-SIGNATURE
 TODO
 lib/Unicode/Stringprep.pm
 lib/Unicode/Stringprep/BiDi.pm
@@ -20,3 +18,5 @@ t/nameprep.t
 t/nameprep_st.t
 t/saslprep.t
 Examples.pod
+META.yml                                 Module meta-data (added by MakeMaker)
+SIGNATURE                                Public-key signature (added by MakeMaker)

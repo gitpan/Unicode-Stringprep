@@ -1,4 +1,4 @@
-# $Id: Makefile.PL 83 2008-09-20 14:51:23Z cfaerber $
+# $Id: Makefile.PL 92 2009-12-13 19:31:48Z cfaerber $
 
 BEGIN { require 5.006; }
 
@@ -12,6 +12,8 @@ WriteMakefile(
 	'VERSION_FROM'	=> 'lib/Unicode/Stringprep.pm', # finds $VERSION
 	'PREREQ_PM'	=> {
 		'Unicode::Normalize' => 0.30,
+		'Test::NoWarnings' => 0,
+		'Test::More' => 0,
 	    },
 	'ABSTRACT'	=> 'Preparation of Internationalized Strings (RFC 3454)',
 	'AUTHOR'	=> 'Claus Faerber <CFAERBER@cpan.org>',
@@ -31,12 +33,9 @@ WriteMakefile(
 
 sub MY::postamble {
 return <<EOF
-release: release-sf release-cpan
+release: release-cpan
 
 release-cpan:
 	cpan-upload \$(DISTVNAME).tar\$(SUFFIX)
-
-release-sf:
-	sf-upload -groupid 112466 -packageid 246624 -r \$(VERSION) -cf Changes -nf README -f \$(DISTVNAME).tar\$(SUFFIX)
 EOF
 }

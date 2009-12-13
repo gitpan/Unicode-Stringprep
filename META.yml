@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Unicode-Stringprep
-version:            1.01
+version:            1.02
 abstract:           Preparation of Internationalized Strings (RFC 3454)
 author:
     - Claus Faerber <CFAERBER@cpan.org>
@@ -10,6 +10,8 @@ configure_requires:
     ExtUtils::MakeMaker:  0
 requires:
     perl:                5.006
+    Test::More:          0
+    Test::NoWarnings:    0
     Unicode::Normalize:  0.3
 no_index:
     directory:
