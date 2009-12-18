@@ -1,5 +1,3 @@
-# $Id: 00use.t 85 2009-12-10 19:00:14Z cfaerber $
-
 use strict;
 use Test::More tests=>6;
 use Test::NoWarnings;

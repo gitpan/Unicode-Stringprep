@@ -14,31 +14,36 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 24c024c7d88afa42df85baef87e83db25e671a80 Changes
-SHA1 f71d409fc9b6fa5a6578f57c0922b0c4d2862da9 Examples.pod
-SHA1 f235ba4160673bcb7c9d58c2f09dbc7fc0efadea LICENSE
-SHA1 46e21a2c3837b714a43a0ef49fa6c438d4494e98 MANIFEST
-SHA1 ad6d581e217f7e3536f76104a7a8abdd43fb3181 META.yml
-SHA1 d5a19904cb60da3dcfd1da92771d8c4143173a45 Makefile.PL
-SHA1 9f238e8a6223fbd743214835f59b5e93ce0993cf README
-SHA1 cc31729b608ec47bcd25348da0d50bb103989a9b TODO
-SHA1 a8805390cde414ef3967ee20adbaf5687909e8a2 lib/Unicode/Stringprep.pm
-SHA1 959ee3b3f95fe5bcabfb35352d23167af0a26f49 lib/Unicode/Stringprep/BiDi.pm
-SHA1 98c0524b443e2ae813c258036e24e467ee8e8105 lib/Unicode/Stringprep/Mapping.pm
-SHA1 413c9c8e80dd2d2df0ecf2c7a67cf2e829948e0c lib/Unicode/Stringprep/Prohibited.pm
-SHA1 5d4b1b5cef75de65148e27687126b893d8cc0808 lib/Unicode/Stringprep/Unassigned.pm
-SHA1 d0885e3a735cda3edbb48b67a48169d8ce36e18e lib/Unicode/Stringprep/_Common.pm
-SHA1 0ae046cc531722156fcd5dc36c284cc66ad8b96f t/00use.t
-SHA1 53508ac80a0b4306eb5fd957c8f5ac19d147357d t/01ref.t
-SHA1 ab432cf5f9eefd3e852773d09204abb303f13f2c t/10pod.t
-SHA1 37d84586bc3bde78303008ac8f20e6f2a0295d31 t/11pod_cover.t
-SHA1 107971d540de9f00c472337f022a5639653754d3 t/nameprep.t
-SHA1 1dc2f7da38103e46a54cddcb2ef7887eb379a59e t/nameprep_st.t
-SHA1 a61f4790c67dae09bc468845ecdea4b416e631c4 t/saslprep.t
+SHA1 3de39642ce16734ab1948c89abb749f9610925c7 Changes
+SHA1 276c6f551968687e626a539e7d33bb1c9929f528 LICENSE
+SHA1 2d3a2ef30ec58a6d24eb5bdc13fa0441af23dcdd MANIFEST
+SHA1 cf2b5fd28d48bc7e065f90608facd1b716194842 META.yml
+SHA1 3be710e878f8e97c4f036b9af50f4ed46faff1a7 Makefile.PL
+SHA1 1a10e92d607ff600404ccb140894998f4a1f41cb README
+SHA1 85a3ac0c5d7af229a576358a738c1bc0ddf03848 eg/Examples.pod
+SHA1 f6829baa052c940d0bd9ccecff132671f97395b3 eg/Nameprep.pm
+SHA1 43f88ca4db5e7eb71e2e01f068dac3006530d093 eg/SASLprep.pm
+SHA1 92666039ba0ad96c66055009a9e982fc8b8d9848 lib/Unicode/Stringprep.pm
+SHA1 a3343214640e7c3bbfdf74930158f9c13f877e80 lib/Unicode/Stringprep/BiDi.pm
+SHA1 757c2087098cc730211b31c7c512a32cd9bad35d lib/Unicode/Stringprep/Mapping.pm
+SHA1 5c4ce52db7bd0da523447154ba087309739e5aa4 lib/Unicode/Stringprep/Prohibited.pm
+SHA1 b0b86650c4845bec3f6730e163bd1f2e742dc8a0 lib/Unicode/Stringprep/Unassigned.pm
+SHA1 7c66306d7c51c1fd0ce3e3f5b2c0d8f11d01c4d0 lib/Unicode/Stringprep/_Common.pm
+SHA1 41e0e43142b871a776bccde036bb73c64d102f98 t/00_use.t
+SHA1 ab73a06aad69cc7d949f171887174cb11c62c5b2 t/01_references.t
+SHA1 056063d18c3f48338620bbff698f81f91f2ea4d0 t/10_pod_check.t
+SHA1 b0c66bcb572f82e4401fee07b5342d09f6918c87 t/11_pod_coverage.t
+SHA1 fd73391bb340d858915aa8a9cdfc0d534bcf5813 t/20_internal_u8_a.t
+SHA1 c5c4b85f529f385bed6bc3346e6d47adf9358c85 t/30_mappings.t
+SHA1 26c77f99a4abf5dd30c2ee0bb13c5670c1c0e8dd t/31_prohibited_characters.t
+SHA1 a1892f449321bfdc0a8553305c692125f8c54578 t/31_prohibited_characters_extra.t
+SHA1 f22f4e19bc8ea541cf9d73a227d7915744ca5a6e t/nameprep.t
+SHA1 e6954746ca94b283960ddbbbf5cd816859ec1fef t/nameprep_st.t
+SHA1 f5053025cd885fb2828897100235fbb1eb57c9df t/saslprep.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAkslQTUACgkQSKUOY2OWgPA4YACfdutUzRPtg2ZcJ2RcJq/EnGcf
-r5oAoIeY3doOLaAGaYO++SIYptLZPMxY
-=q6wH
+iEYEARECAAYFAksrX6YACgkQSKUOY2OWgPBnZwCgkOx0HLhePNu9Z6XSyC0D7seG
+u/oAn29WU34zS4tNt9PDF7UGlqI8E3lK
+=s7a6
 -----END PGP SIGNATURE-----

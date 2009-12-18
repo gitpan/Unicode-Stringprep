@@ -1,5 +1,3 @@
-# $Id: 01ref.t 85 2009-12-10 19:00:14Z cfaerber $
-
 use strict;
 use utf8;
 

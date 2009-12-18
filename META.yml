@@ -1,25 +1,41 @@
---- #YAML:1.0
-name:               Unicode-Stringprep
-version:            1.02
-abstract:           Preparation of Internationalized Strings (RFC 3454)
+---
+name: Unicode-Stringprep
+version: 1.09_20091218
 author:
-    - Claus Faerber <CFAERBER@cpan.org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Claus FE<auml>rber <CFAERBER@cpan.org>'
+abstract: Preparation of Internationalized Strings (S<RFC 3454>)
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+build_requires:
+  Test::More: 0
+  Test::NoWarnings: 0
 requires:
-    perl:                5.006
-    Test::More:          0
-    Test::NoWarnings:    0
-    Unicode::Normalize:  0.3
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.48
-meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  Unicode::Normalize: 0.3
+  perl: 5.006
 recommends:
-    perl:  5.008003
+  perl: 5.008003
+configure_requires:
+  Module::Build: 0.35
+provides:
+  Unicode::Stringprep:
+    file: lib/Unicode/Stringprep.pm
+    version: 1.09_20091218
+  Unicode::Stringprep::BiDi:
+    file: lib/Unicode/Stringprep/BiDi.pm
+    version: 1.01
+  Unicode::Stringprep::Mapping:
+    file: lib/Unicode/Stringprep/Mapping.pm
+    version: 1.01
+  Unicode::Stringprep::Prohibited:
+    file: lib/Unicode/Stringprep/Prohibited.pm
+    version: 1.01
+  Unicode::Stringprep::Unassigned:
+    file: lib/Unicode/Stringprep/Unassigned.pm
+    version: 1.01
+no_index:
+  directory: eg
+generated_by: Module::Build version 0.35
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
