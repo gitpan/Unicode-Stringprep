@@ -24,7 +24,5 @@ my $prep = Unicode::Stringprep->new( 3.2, [ ], '', [ @data ], 0 );
 foreach(@data) 
 {
   my $in = $_;
-  is( eval { $prep->(chr($in)) },
-    undef, 
-    sprintf 'U+%04X', $in);
+  is( eval { $prep->(chr($in)) }, undef, sprintf 'U+%04X', $in);
 }

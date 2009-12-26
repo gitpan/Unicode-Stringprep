@@ -1,6 +1,6 @@
 ---
 name: Unicode-Stringprep
-version: 1.09_20091221
+version: 1.09_70091226
 author:
   - 'Claus FE<auml>rber <CFAERBER@cpan.org>'
 abstract: Preparation of Internationalized Strings (S<RFC 3454>)
@@ -12,13 +12,15 @@ build_requires:
   Test::NoWarnings: 0
 requires:
   Unicode::Normalize: 0.3
+  perl: 5.006
+recommends:
   perl: 5.008003
 configure_requires:
   Module::Build: 0.35
 provides:
   Unicode::Stringprep:
     file: lib/Unicode/Stringprep.pm
-    version: 1.09_20091221
+    version: 1.09_70091226
   Unicode::Stringprep::BiDi:
     file: lib/Unicode/Stringprep/BiDi.pm
     version: 1.01

@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 91e2dd669a1a6ebee6130c35e0f82db00641770f Changes
+SHA1 9533e5c09a31cdb27b8593af79c8f8f281579161 Changes
 SHA1 276c6f551968687e626a539e7d33bb1c9929f528 LICENSE
 SHA1 371d13bebeb4662e8cedcfe1ef11449d59170ac4 MANIFEST
-SHA1 f4b8c5d7941413ff2b1ee64eab6e7e32794c06e9 META.yml
-SHA1 dc3d95e45666c9ce53b5539d240b9653e2813cc0 Makefile.PL
-SHA1 1a10e92d607ff600404ccb140894998f4a1f41cb README
+SHA1 8b9dbc8de4eb824c1c3588378afb229503460c78 META.yml
+SHA1 3be710e878f8e97c4f036b9af50f4ed46faff1a7 Makefile.PL
+SHA1 76b5306b21e526d332660e5ca9ad9a5f77eacaea README
 SHA1 85a3ac0c5d7af229a576358a738c1bc0ddf03848 eg/Examples.pod
 SHA1 f6829baa052c940d0bd9ccecff132671f97395b3 eg/Nameprep.pm
 SHA1 43f88ca4db5e7eb71e2e01f068dac3006530d093 eg/SASLprep.pm
-SHA1 d4a959e57fd68d8f3b811e708030c25a2edecbc2 lib/Unicode/Stringprep.pm
+SHA1 8e8c2d8aeb688605bfd8f60db69c4d70e7a6ab55 lib/Unicode/Stringprep.pm
 SHA1 a3343214640e7c3bbfdf74930158f9c13f877e80 lib/Unicode/Stringprep/BiDi.pm
 SHA1 757c2087098cc730211b31c7c512a32cd9bad35d lib/Unicode/Stringprep/Mapping.pm
 SHA1 5c4ce52db7bd0da523447154ba087309739e5aa4 lib/Unicode/Stringprep/Prohibited.pm
@@ -33,16 +33,16 @@ SHA1 41e0e43142b871a776bccde036bb73c64d102f98 t/00_use.t
 SHA1 ab73a06aad69cc7d949f171887174cb11c62c5b2 t/01_references.t
 SHA1 056063d18c3f48338620bbff698f81f91f2ea4d0 t/10_pod_check.t
 SHA1 b0c66bcb572f82e4401fee07b5342d09f6918c87 t/11_pod_coverage.t
-SHA1 6e33ea2fc4f88be7649f94e5bbc654352f9accb0 t/30_mappings.t
-SHA1 1c71127c527b300c71cf98de5a3f86a0416ba10b t/31_prohibited_characters.t
-SHA1 856ba8bc1b4a90ed6d0207ecbdd9fc88272e192e t/31_prohibited_characters_extra.t
-SHA1 f22f4e19bc8ea541cf9d73a227d7915744ca5a6e t/nameprep.t
-SHA1 6ed157b5485bfcff3b7878f8ab46cf4547bcbc30 t/nameprep_st.t
+SHA1 14d838f025e6c93b77d7f3e5dc3a6831ecabaddb t/30_mappings.t
+SHA1 6b1e4f87a1034cebfc29eac99bbd1b0baf114e30 t/31_prohibited_characters.t
+SHA1 e4e46d46098fdb9590cb9cb1eb4c04dce8a17ee4 t/31_prohibited_characters_extra.t
+SHA1 665151c7c52ffe874cfd9c4e65bf83be07b12164 t/nameprep.t
+SHA1 be28bbfcb07395f309e7aeaaf45bd4c5fa963571 t/nameprep_st.t
 SHA1 f5053025cd885fb2828897100235fbb1eb57c9df t/saslprep.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAksvRUQACgkQSKUOY2OWgPDwLwCfX+YBvhQX0Dbv/CDr0xjLLo07
-z0sAn2v32ST9uU2jyU3jRe4pGyNie6/Y
-=Jfsg
+iEYEARECAAYFAks1XOUACgkQSKUOY2OWgPD1PACfSP/5pbmUe4iXD+cM8bnk8xGU
+1BIAnjDph0kmQPRX1qvnWTlaqg43fnAB
+=VWrM
 -----END PGP SIGNATURE-----
