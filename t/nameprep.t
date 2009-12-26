@@ -8,8 +8,6 @@ use Test::NoWarnings;
 
 use Unicode::Stringprep;
 
-binmode STDOUT, ":utf8";
-
 our @strprep = (
      [
        "Map to nothing",
@@ -248,11 +246,11 @@ foreach my $test (@strprep)
 {
   my ($comment,$in,$out,$profile,$flags,$rc, $min_perl, $min_perl_reason) = @{$test};
 
- # SKIP: { 
- #   skip sprintf('%s only works from perl v%d.%d.%d', 
- #       $min_perl_reason || "test", 
- #       int($min_perl), int($min_perl*1000)%1000, int($min_perl*1000*1000)%1000,), 1 
- #     if(($min_perl || 0) > $^V);
+  SKIP: { 
+    skip sprintf('%s only works from perl v%d.%d.%d', 
+        $min_perl_reason || "test", 
+        int($min_perl), int($min_perl*1000)%1000, int($min_perl*1000*1000)%1000,), 1 
+      if(($min_perl || 0) > $^V);
 
     if($rc) { is(eval{nameprep($in)}, undef, $comment); }
        else { is(eval{nameprep($in)} || $@, $out, $comment); }
