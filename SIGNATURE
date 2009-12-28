@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 3e3286201c3be1a77e19f5daa6b7377b2933dc23 Build.PL
+SHA1 69b18857a5ca470e27366b833b7a57afbc6007c6 Build.PL
 SHA1 36ae5b772247dd37847174369f1f8167ecf30271 Changes
 SHA1 276c6f551968687e626a539e7d33bb1c9929f528 LICENSE
 SHA1 42c6f0f54bc4dbd03be8129a96b62aa5fe1a471c MANIFEST
-SHA1 7b6f7d001fa566f2857cc9694e8172be9fe1b504 META.yml
-SHA1 3be710e878f8e97c4f036b9af50f4ed46faff1a7 Makefile.PL
+SHA1 24544b022c7a44e3bfcf809d6b0c26d67edaf220 META.yml
+SHA1 dc3d95e45666c9ce53b5539d240b9653e2813cc0 Makefile.PL
 SHA1 76b5306b21e526d332660e5ca9ad9a5f77eacaea README
 SHA1 85a3ac0c5d7af229a576358a738c1bc0ddf03848 eg/Examples.pod
 SHA1 f6829baa052c940d0bd9ccecff132671f97395b3 eg/Nameprep.pm
 SHA1 43f88ca4db5e7eb71e2e01f068dac3006530d093 eg/SASLprep.pm
-SHA1 bb2c8656b590abd1c60d0d8a59f0cb1f63a2a336 lib/Unicode/Stringprep.pm
+SHA1 584e846fbc2732d8040b0d479e5bfd29c7821963 lib/Unicode/Stringprep.pm
 SHA1 a3343214640e7c3bbfdf74930158f9c13f877e80 lib/Unicode/Stringprep/BiDi.pm
 SHA1 757c2087098cc730211b31c7c512a32cd9bad35d lib/Unicode/Stringprep/Mapping.pm
 SHA1 5c4ce52db7bd0da523447154ba087309739e5aa4 lib/Unicode/Stringprep/Prohibited.pm
@@ -37,8 +37,8 @@ SHA1 b0c66bcb572f82e4401fee07b5342d09f6918c87 t/11_pod_coverage.t
 SHA1 14d838f025e6c93b77d7f3e5dc3a6831ecabaddb t/30_mappings.t
 SHA1 6b1e4f87a1034cebfc29eac99bbd1b0baf114e30 t/31_prohibited_characters.t
 SHA1 e4e46d46098fdb9590cb9cb1eb4c04dce8a17ee4 t/31_prohibited_characters_extra.t
-SHA1 0c95e9faaa49fd76169d2340d5408e7f2aa0e110 t/32_nfkc_3_2.t
-SHA1 09af807c31b4ee32fa1474faf7cbe2be462dca37 t/99_perl-5.11.2-3.t
+SHA1 eab9140472500d97c6ab376c12c9105f26657fa0 t/32_nfkc_3_2.t
+SHA1 75cfecdd9a6c34e71faae00d84c11bd16dc7c7e3 t/99_perl-5.11.2-3.t
 SHA1 571afb1f57976934f7b045346c6d3754684007ec t/nameprep.t
 SHA1 37ce46ea177f432e74688df86766fe5f7ac027f6 t/nameprep_bytes.t
 SHA1 0007601b969149ac06b5a9d4f8882728ddae1318 t/nameprep_stored.t
@@ -47,7 +47,7 @@ SHA1 34c09f6db7be90d9c8ebd3be1d10979d2af901b8 t/saslprep_bytes.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAks4ncIACgkQSKUOY2OWgPA+ygCgo2UXIOGFU/HjemrnjPQQ6cba
-SUwAoLfaAFtU+qGZz9GDiV7rxkXAubyG
-=a/3g
+iEYEARECAAYFAks4zu8ACgkQSKUOY2OWgPBFmwCgqb1P9EsC/xbF6SheMWK64UV/
+eW4An073PzlQDvNYUKYjFQUjf74lsleL
+=VQey
 -----END PGP SIGNATURE-----
