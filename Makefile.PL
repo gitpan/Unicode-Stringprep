@@ -11,7 +11,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'Test::NoWarnings' => 0,
-                           'Unicode::Normalize' => '0.3'
+                           'Unicode::Normalize' => 1
                          }
         )
 ;
