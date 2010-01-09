@@ -15,16 +15,16 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 7d67d18e897a3902c21cb4559487c31a14675930 Build.PL
-SHA1 e76b58a21247eb42f3f76307dbad73fe8a94f218 Changes
+SHA1 745d4e16331cd6ca8e0ffca31e5c2d54b5a8b943 Changes
 SHA1 4dae24b8996f71e9778ca53e9da378795b12b9cd LICENSE
 SHA1 a46b7a173679fc5812e15d7956e54b0a21fb93fd MANIFEST
-SHA1 50b85e915c62b6efb4b901ea6a38532380ed1e29 META.yml
+SHA1 f2c45e10c33e08f23799985a2a09619b9917519f META.yml
 SHA1 2e3a733b6c4b86437e9edf93363ca6d6bb45e9e4 Makefile.PL
 SHA1 76b5306b21e526d332660e5ca9ad9a5f77eacaea README
 SHA1 f6829baa052c940d0bd9ccecff132671f97395b3 eg/Nameprep.pm
 SHA1 85a3ac0c5d7af229a576358a738c1bc0ddf03848 eg/Readme-Examples.pod
 SHA1 43f88ca4db5e7eb71e2e01f068dac3006530d093 eg/SASLprep.pm
-SHA1 10a52cf065cb5573ef8d23cd92fefa614e43143c lib/Unicode/Stringprep.pm
+SHA1 6c64a25472d16c8b74e25adc0dfb420ec5595ca4 lib/Unicode/Stringprep.pm
 SHA1 06b50c467935acee6dce848b6a7a236d0c702bfb lib/Unicode/Stringprep/BiDi.pm
 SHA1 8e3fae6729e1caa7f81c18e88968d700712eef8e lib/Unicode/Stringprep/Mapping.pm
 SHA1 321adeb3c3cc69b7d34bbce5a6ed9d0a7f01b96d lib/Unicode/Stringprep/Prohibited.pm
@@ -47,7 +47,7 @@ SHA1 34c09f6db7be90d9c8ebd3be1d10979d2af901b8 t/saslprep_bytes.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAktAdXEACgkQSKUOY2OWgPBtFwCgyU1I46cbLD/L9e3sohFHWmPz
-X68Anjq/X02sa74IFCuMOt5S2MZ9Cj0K
-=B1v2
+iEYEARECAAYFAktIwFcACgkQSKUOY2OWgPBcQACfa5Ixf4aLWvbPGCzcfXXcYWv9
+aO4An2BeF5QIlgCiMNJu7gbSRz4b1UCv
+=gmy/
 -----END PGP SIGNATURE-----

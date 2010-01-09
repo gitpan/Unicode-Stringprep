@@ -1,6 +1,6 @@
 ---
 name: Unicode-Stringprep
-version: 1.101
+version: 1.102
 author:
   - 'Claus Färber <CFAERBER@cpan.org>'
 abstract: Preparation of Internationalized Strings (RFC 3454)
@@ -18,7 +18,7 @@ configure_requires:
 provides:
   Unicode::Stringprep:
     file: lib/Unicode/Stringprep.pm
-    version: 1.101
+    version: 1.102
   Unicode::Stringprep::BiDi:
     file: lib/Unicode/Stringprep/BiDi.pm
     version: 1.10
