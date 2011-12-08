@@ -1,24 +1,26 @@
 ---
-name: Unicode-Stringprep
-version: 1.103
+abstract: 'Preparation of Internationalized Strings (RFC 3454)'
 author:
-  - 'Claus Färber <CFAERBER@cpan.org>'
-abstract: Preparation of Internationalized Strings (RFC 3454)
-license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+  - 'Claus FÃ¤rber <CFAERBER@cpan.org>'
 build_requires:
   Test::More: 0
   Test::NoWarnings: 0
-requires:
-  Unicode::Normalize: 1
-  perl: 5.008003
 configure_requires:
-  Module::Build: 0.35
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112621'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Unicode-Stringprep
+no_index:
+  directory:
+    - eg
 provides:
   Unicode::Stringprep:
     file: lib/Unicode/Stringprep.pm
-    version: 1.103
+    version: 1.104
   Unicode::Stringprep::BiDi:
     file: lib/Unicode/Stringprep/BiDi.pm
     version: 1.10
@@ -31,9 +33,9 @@ provides:
   Unicode::Stringprep::Unassigned:
     file: lib/Unicode/Stringprep/Unassigned.pm
     version: 1.10
-no_index:
-  directory: eg
-generated_by: Module::Build version 0.35
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+requires:
+  Unicode::Normalize: 1
+  perl: 5.008003
+resources:
+  license: http://dev.perl.org/licenses/
+version: 1.104

@@ -28,4 +28,5 @@ eg/Readme-Examples.pod
 eg/Nameprep.pm
 eg/SASLprep.pm
 META.yml
+META.json
 SIGNATURE    Added here by Module::Build
