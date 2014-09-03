@@ -6,9 +6,9 @@ build_requires:
   Test::More: 0
   Test::NoWarnings: 0
 configure_requires:
-  Module::Build: 0.38
+  Module::Build: 0.42
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112621'
+generated_by: 'Module::Build version 0.4208, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,25 +17,9 @@ name: Unicode-Stringprep
 no_index:
   directory:
     - eg
-provides:
-  Unicode::Stringprep:
-    file: lib/Unicode/Stringprep.pm
-    version: 1.104
-  Unicode::Stringprep::BiDi:
-    file: lib/Unicode/Stringprep/BiDi.pm
-    version: 1.10
-  Unicode::Stringprep::Mapping:
-    file: lib/Unicode/Stringprep/Mapping.pm
-    version: 1.10
-  Unicode::Stringprep::Prohibited:
-    file: lib/Unicode/Stringprep/Prohibited.pm
-    version: 1.10
-  Unicode::Stringprep::Unassigned:
-    file: lib/Unicode/Stringprep/Unassigned.pm
-    version: 1.10
 requires:
   Unicode::Normalize: 1
   perl: 5.008003
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.104
+version: 1.105
